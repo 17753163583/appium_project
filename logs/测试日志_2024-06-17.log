@@ -1,0 +1,1242 @@
+2024-06-17 10:07:13.776 | INFO | conftest:login:14 | 连接设备成功
+2024-06-17 10:07:35.159 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<test_onelap_report.TestOnelap object at 0x00000133F6690E60>,){'login': None}
+2024-06-17 10:07:35.168 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\test_onelap_report.py", line 18, in test_login
+    get_app_name = find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_app_name_main_fragment')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\webdriver.py", line 383, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:137:14)
+    at spin (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:139:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:07:35.173 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<test_onelap_report.TestOnelap object at 0x00000133F66BA060>,){}
+2024-06-17 10:07:37.179 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\test_onelap_report.py", line 29, in test_report
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/include_planet_bottom_navigation').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\webdriver.py", line 383, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:137:14)
+    at spin (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:139:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:09:38.481 | INFO | conftest:login:14 | 连接设备成功
+2024-06-17 10:09:58.050 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<test_onelap_report.TestOnelap object at 0x000001BA049BBCE0>,){'login': None}
+2024-06-17 10:09:58.057 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\test_onelap_report.py", line 18, in test_login
+    get_app_name = find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_app_name_main_fragment')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\webdriver.py", line 383, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:137:14)
+    at spin (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:139:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:09:58.064 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<test_onelap_report.TestOnelap object at 0x000001BA04AF3CB0>,){}
+2024-06-17 10:10:00.069 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\test_onelap_report.py", line 29, in test_report
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/include_planet_bottom_navigation').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\webdriver.py", line 383, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:137:14)
+    at spin (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:139:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:14:36.873 | INFO | conftest:login:14 | 连接设备成功
+2024-06-17 10:14:49.476 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<test_onelap_report.TestOnelap object at 0x0000028D26667EC0>,){'login': None}
+2024-06-17 10:14:49.482 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\test_onelap_report.py", line 18, in test_login
+    get_app_name = find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_app_name_main_fragment')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\webdriver.py", line 383, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:137:14)
+    at spin (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:139:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:14:49.485 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<test_onelap_report.TestOnelap object at 0x0000028D28D07680>,){'login': None}
+2024-06-17 10:14:51.491 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\test_onelap_report.py", line 29, in test_report
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/include_planet_bottom_navigation').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\webdriver.py", line 383, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:137:14)
+    at spin (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:139:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:17:46.199 | INFO | TestCase.conftest:login:14 | 连接设备成功
+2024-06-17 10:17:57.174 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001AD082DEDE0>,){'login': None}
+2024-06-17 10:17:57.179 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 18, in test_login
+    get_app_name = find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_app_name_main_fragment')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\webdriver.py", line 383, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:137:14)
+    at spin (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:139:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:17:57.183 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001AD0B389BE0>,){'login': None}
+2024-06-17 10:17:59.188 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 29, in test_report
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/include_planet_bottom_navigation').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\webdriver.py", line 383, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:137:14)
+    at spin (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:139:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:18:40.091 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001F1B115F8F0>,){}
+2024-06-17 10:18:45.466 | INFO | TestCase.test_onelap_report:test_login:20 | 连接设备成功
+2024-06-17 10:19:08.074 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 31, in test_login
+    get_app_name = find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_app_name_main_fragment')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:19:08.078 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001F1B4337860>,){}
+2024-06-17 10:19:10.085 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 42, in test_report
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/include_planet_bottom_navigation').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\webdriver.py", line 383, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:137:14)
+    at spin (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:139:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:28:44.546 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001E2D813C7A0>,){}
+2024-06-17 10:28:44.546 | INFO | TestCase.test_onelap_report:test_login:19 | 连接设备成功
+2024-06-17 10:29:00.370 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 21, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_agree_privacy_dialog').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:29:00.372 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001E2DB2FBA70>,){}
+2024-06-17 10:29:28.339 | INFO | Common.logger:wrapper:48 | 函数 test_report 执行完成，函数返回结果：None
+
+2024-06-17 10:30:08.662 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001D72412C9E0>,){}
+2024-06-17 10:30:08.662 | INFO | TestCase.test_onelap_report:test_login:19 | 连接设备成功
+2024-06-17 10:30:20.833 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 21, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_agree_privacy_dialog').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:30:20.835 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001D7261AF800>,){}
+2024-06-17 10:30:35.722 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001FFE7F94350>,){}
+2024-06-17 10:30:35.722 | INFO | TestCase.test_onelap_report:test_login:19 | 连接设备成功
+2024-06-17 10:30:47.897 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 21, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_agree_privacy_dialog').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:30:47.899 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001FFE7F2B0E0>,){}
+2024-06-17 10:31:02.144 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 42, in test_report
+    find_element(driver, 'id', 'com.android.packageinstaller:id/permission_allow_button').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:31:53.463 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001F2903B5130>,){}
+2024-06-17 10:31:53.463 | INFO | TestCase.test_onelap_report:test_login:19 | 连接设备成功
+2024-06-17 10:33:41.257 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001A507C37C20>,){}
+2024-06-17 10:33:51.298 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 19, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/btn_login_login').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:33:51.300 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001A50B169BE0>,){}
+2024-06-17 10:34:38.982 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x00000249731B5E50>,){}
+2024-06-17 10:34:49.222 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 19, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/btn_login_login').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:34:49.224 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x0000024975829520>,){}
+2024-06-17 10:35:46.806 | INFO | TestCase.conftest:login:14 | 连接设备成功
+2024-06-17 10:35:54.691 | INFO | TestCase.conftest:login:21 | 登录前置完成
+2024-06-17 10:35:54.693 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x0000013A2900C9E0>,){'login': None}
+2024-06-17 10:35:54.699 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 19, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/btn_login_login').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\webdriver.py", line 383, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:137:14)
+    at spin (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:139:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:35:54.702 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x0000013A2BBB7E60>,){'login': None}
+2024-06-17 10:35:56.708 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 44, in test_report
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/include_planet_bottom_navigation').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\webdriver.py", line 383, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:137:14)
+    at spin (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:139:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:37:57.079 | INFO | TestCase.conftest:login:14 | 连接设备成功
+2024-06-17 10:38:13.661 | INFO | TestCase.conftest:login:14 | 连接设备成功
+2024-06-17 10:38:58.475 | INFO | TestCase.conftest:login:14 | 连接设备成功
+2024-06-17 10:39:40.103 | INFO | TestCase.conftest:login:14 | 连接设备成功
+2024-06-17 10:39:58.236 | INFO | TestCase.conftest:login:14 | 连接设备成功
+2024-06-17 10:40:32.782 | INFO | TestCase.conftest:login:14 | 连接设备成功
+2024-06-17 10:40:41.845 | INFO | TestCase.conftest:login:21 | 登录前置完成
+2024-06-17 10:40:41.847 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000002A1BCFD3DA0>,){'login': None}
+2024-06-17 10:40:41.853 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 19, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/btn_login_login').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\webdriver.py", line 383, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:137:14)
+    at spin (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:139:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:40:41.859 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000002A1BAABEBA0>,){'login': None}
+2024-06-17 10:40:43.866 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 44, in test_report
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/include_planet_bottom_navigation').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\webdriver.py", line 383, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:137:14)
+    at spin (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:139:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:41:54.810 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000002A14FCB8A10>,){}
+2024-06-17 10:41:54.811 | INFO | TestCase.test_onelap_report:test_login:20 | 连接设备成功
+2024-06-17 10:42:05.049 | INFO | TestCase.test_onelap_report:test_login:27 | 登录前置完成
+2024-06-17 10:42:08.587 | INFO | TestCase.test_onelap_report:test_login:32 | 登录完成
+2024-06-17 10:42:24.589 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 34, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_agree_privacy_dialog').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:42:24.591 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000002A14FCB8200>,){}
+2024-06-17 10:42:42.907 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 73, in test_report
+    actions.click_and_hold(content).pause(2).release().perform()
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\common\action_chains.py", line 94, in perform
+    self.w3c_actions.perform()
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\common\actions\action_builder.py", line 96, in perform
+    self.driver.execute(Command.W3C_ACTIONS, enc)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /actions' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /actions' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.performActions (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\actions.js:66:3)
+
+
+2024-06-17 10:54:36.330 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x0000029A0D745430>,){}
+2024-06-17 10:54:36.331 | INFO | TestCase.test_onelap_report:test_login:20 | 连接设备成功
+2024-06-17 10:54:43.536 | INFO | TestCase.test_onelap_report:test_login:27 | 登录前置完成
+2024-06-17 10:54:50.348 | INFO | TestCase.test_onelap_report:test_login:32 | 登录完成
+2024-06-17 10:55:03.838 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 34, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_agree_privacy_dialog').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 10:55:03.840 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x0000029A0D7F4260>,){}
+2024-06-17 10:55:22.542 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 73, in test_report
+    actions.click_and_hold(content).pause(2).release().perform()
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\common\action_chains.py", line 94, in perform
+    self.w3c_actions.perform()
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\common\actions\action_builder.py", line 96, in perform
+    self.driver.execute(Command.W3C_ACTIONS, enc)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /actions' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /actions' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:355:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.performActions (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\lib\commands\actions.js:66:3)
+
+
+2024-06-17 11:08:40.131 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x0000020CD14EBFE0>,){}
+2024-06-17 11:08:43.078 | INFO | TestCase.test_onelap_report:test_login:16 | 连接设备成功
+2024-06-17 11:08:53.366 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 18, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_agree_privacy_dialog').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:08:53.369 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x0000020CD2126810>,){}
+2024-06-17 11:09:04.743 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x0000018CBCEE7D10>,){}
+2024-06-17 11:09:10.852 | INFO | TestCase.test_onelap_report:test_login:16 | 连接设备成功
+2024-06-17 11:09:21.072 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 18, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_agree_privacy_dialog').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:09:21.075 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x0000018CBF478A40>,){}
+2024-06-17 11:09:39.015 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 56, in test_report
+    find_element(driver, 'id', 'com.android.packageinstaller:id/permission_allow_button').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:13:13.142 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x00000235058B13A0>,){}
+2024-06-17 11:13:17.111 | INFO | TestCase.test_onelap_report:test_login:16 | 连接设备成功
+2024-06-17 11:13:27.227 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 18, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_agree_privacy_dialog').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:13:27.229 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x0000023503E55250>,){}
+2024-06-17 11:13:43.748 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 56, in test_report
+    find_element(driver, 'id', 'com.android.packageinstaller:id/permission_allow_button').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:14:16.919 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001A98FF74A70>,){}
+2024-06-17 11:14:27.574 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001C452EDEE40>,){}
+2024-06-17 11:14:33.592 | INFO | TestCase.test_onelap_report:test_login:16 | 连接设备成功
+2024-06-17 11:14:43.598 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 18, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_agree_privacy_dialog').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:14:43.601 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001C450936150>,){}
+2024-06-17 11:15:01.869 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 56, in test_report
+    find_element(driver, 'id', 'com.android.packageinstaller:id/permission_allow_button').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:17:56.622 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000002850AF3E420>,){}
+2024-06-17 11:18:02.597 | INFO | TestCase.test_onelap_report:test_login:16 | 连接设备成功
+2024-06-17 11:18:12.663 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 18, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_agree_privacy_dialog').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:18:12.665 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x00000285095AD370>,){}
+2024-06-17 11:18:28.831 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 56, in test_report
+    find_element(driver, 'id', 'com.android.packageinstaller:id/permission_allow_button').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:19:23.022 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001A51F7EBFE0>,){}
+2024-06-17 11:19:27.005 | INFO | TestCase.test_onelap_report:test_login:16 | 连接设备成功
+2024-06-17 11:19:37.090 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 18, in test_login
+    find_element(driver, 'id', "com.onelap.bls.dear:id/tv_agree_privacy_dialog").click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:19:37.092 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001A51D204D10>,){}
+2024-06-17 11:19:58.656 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x00000154B9931520>,){}
+2024-06-17 11:20:04.898 | INFO | TestCase.test_onelap_report:test_login:16 | 连接设备成功
+2024-06-17 11:20:15.036 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 18, in test_login
+    find_element(driver, 'id', "com.onelap.bls.dear:id/tv_agree_privacy_dialog").click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:20:15.038 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x00000154B9972CC0>,){}
+2024-06-17 11:20:54.814 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001516698CD10>,){}
+2024-06-17 11:21:03.270 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x0000027385674AA0>,){}
+2024-06-17 11:21:27.203 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 59, in test_report
+    find_element(driver, 'id', "com.android.packageinstaller:id/permission_allow_button").click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:23:02.706 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x0000025F688855E0>,){}
+2024-06-17 11:23:24.409 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 61, in test_report
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/tv_confirm_common_dialog').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:23:41.649 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000002A15762D370>,){}
+2024-06-17 11:24:17.357 | INFO | Common.logger:wrapper:48 | 函数 test_report 执行完成，函数返回结果：None
+
+2024-06-17 11:26:52.808 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x0000029C5277BFE0>,){}
+2024-06-17 11:26:58.322 | INFO | TestCase.test_onelap_report:test_login:16 | 连接设备成功
+2024-06-17 11:27:05.614 | INFO | TestCase.test_onelap_report:test_login:27 | 登录完成
+2024-06-17 11:27:08.667 | INFO | TestCase.test_onelap_report:test_login:34 | home_app_name断言成功
+2024-06-17 11:27:08.949 | INFO | Common.logger:wrapper:48 | 函数 test_login 执行完成，函数返回结果：None
+
+2024-06-17 11:27:08.951 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x0000029C50194D10>,){}
+2024-06-17 11:27:45.398 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 63, in test_report
+    content = find_element(driver, 'xpath',
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:29:45.839 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001E336DDAA50>,){}
+2024-06-17 11:29:52.049 | INFO | TestCase.test_onelap_report:test_login:16 | 连接设备成功
+2024-06-17 11:30:02.305 | ERROR | Common.logger:wrapper:53 | 函数 test_login 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\Appium_Project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\TestCase\test_onelap_report.py", line 19, in test_login
+    find_element(driver, 'id', 'com.onelap.bls.dear:id/btn_login_index').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 10, in find_element
+    raise e
+  File "F:\python_project\Appium_Project\Common\find_element.py", line 7, in find_element
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\Appium_Project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-17 11:30:02.308 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001E3347DCD10>,){}
+2024-06-17 11:30:32.802 | INFO | Common.logger:wrapper:48 | 函数 test_report 执行完成，函数返回结果：None
+
+2024-06-17 11:31:09.073 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001DD3FFFCA70>,){}
+2024-06-17 11:31:15.279 | INFO | TestCase.test_onelap_report:test_login:16 | 连接设备成功
+2024-06-17 11:31:45.658 | INFO | Common.logger:wrapper:43 | 函数 test_login 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001FC838645F0>,){}
+2024-06-17 11:31:51.570 | INFO | TestCase.test_onelap_report:test_login:16 | 连接设备成功
+2024-06-17 11:31:58.256 | INFO | TestCase.test_onelap_report:test_login:27 | 登录完成
+2024-06-17 11:32:02.024 | INFO | TestCase.test_onelap_report:test_login:34 | home_app_name断言成功
+2024-06-17 11:32:02.025 | INFO | Common.logger:wrapper:48 | 函数 test_login 执行完成，函数返回结果：None
+
+2024-06-17 11:32:02.027 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001FC8393F050>,){}
+2024-06-17 11:32:32.691 | INFO | Common.logger:wrapper:48 | 函数 test_report 执行完成，函数返回结果：None
+
+2024-06-17 17:44:46.616 | INFO | TestCase.conftest:login_onelap:18 | 连接设备成功
+2024-06-17 17:45:18.908 | INFO | TestCase.conftest:login_onelap:18 | 连接设备成功
+2024-06-17 17:45:25.266 | INFO | TestCase.conftest:login_onelap:29 | 登录完成
+2024-06-17 17:45:28.066 | INFO | TestCase.conftest:login_onelap:36 | home_app_name断言成功
+2024-06-17 17:45:28.067 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000002A8BDA44FE0>,){'login_onelap': None}
+2024-06-17 17:45:54.818 | INFO | Common.logger:wrapper:48 | 函数 test_report 执行完成，函数返回结果：None
+
