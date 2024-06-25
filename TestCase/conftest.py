@@ -32,9 +32,9 @@ def login_onelap():
     # 首次打开app
     # find_element_wrap(driver, 'id', 'com.onelap.bls.dear:id/tv_confirm_common_dialog').click()
     if check.equal(get_app_name.text, '顽鹿运动（预发布服）'):
-        logger.info("home_app_name断言成功")
+        logger.info(f"{get_app_name.text}断言成功，登录成功")
     else:
-        logger.error("home_app_name断言失败")
+        logger.error(f"{get_app_name.text}断言失败，登录失败")
 
 
 @log_decorator
