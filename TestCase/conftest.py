@@ -3,10 +3,12 @@ import time
 
 import pytest
 import pytest_check as check
+import requests
 from loguru import logger
 
 from Common.connect_device import connect_device_first
 from Common.find_element import find_element_wrap
+from Common.get_boss_authorization import get_boss_authorization
 from Common.logger import log_decorator
 
 
@@ -55,3 +57,28 @@ def get_boss_cookies(driver):
         logger.info("保存cookies到本地")
     logger.info("删除cookies成功")
     driver.delete_all_cookies()
+
+
+@log_decorator
+@pytest.fixture(scope='function')
+def add_report_requests():
+    # 创建一条举报数据
+    url = 'https://rfs-fitness-informal.rfsvr.net/indoor/api/user/report'
+
+    # 获取boss后台接口的访问密钥
+    token = get_boss_authorization()
+    headers = {'Authorization': token, 'UserId': '238492'}
+
+    data = {"desc": "脚本测试", "source_id": 698, "reason_id": 3, "source_type": 1}
+
+    response = requests.post(url, headers=headers, data=data)
+
+    if response.status_code == 200:
+        logger.info('添加举报数据成功')
+        json_response = json.loads(response.text)
+        report_id = json_response['data']['report_id']
+
+        return report_id
+    else:
+        logger.info('添加举报数据失败')
+        return

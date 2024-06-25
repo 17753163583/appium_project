@@ -162,3 +162,292 @@ NoSuchElementError: An element could not be located on the page using the given 
 2024-06-25 17:20:07.158 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001E413626780>,){'login_onelap': None}
 2024-06-25 17:20:33.823 | INFO | Common.logger:wrapper:48 | 函数 test_report 执行完成，函数返回结果：None
 
+2024-06-25 18:48:18.062 | INFO | Common.logger:wrapper:43 | 函数 test_report_boss 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x00000157330712B0>,){}
+2024-06-25 18:48:24.708 | ERROR | Common.logger:wrapper:53 | 函数 test_report_boss 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\appium_project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\TestCase\test_boss_report.py", line 71, in test_report_boss
+    response = requests.post(url, headers=headers, data=data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\models.py", line 368, in prepare
+    self.prepare_headers(headers)
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\models.py", line 490, in prepare_headers
+    check_header_validity(header)
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\utils.py", line 1042, in check_header_validity
+    _validate_header_part(header, value, 1)
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\utils.py", line 1051, in _validate_header_part
+    raise InvalidHeader(
+requests.exceptions.InvalidHeader: Header part ({'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJrZXkiOiJkaXN0cmljdF9yZWxlYXNlIiwiaXNzIjoyMzg0OTIsInBsYXRmb3JtIjowLCJuYmYiOjE3MTkzMTI0NDYsImV4cCI6MTcxOTM5ODkwNn0.p6GAzWHUCdOrlKEvM8KzVqX6nkEkqEWNz6GXAv93vM8'}) from ('Authorization', {'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJrZXkiOiJkaXN0cmljdF9yZWxlYXNlIiwiaXNzIjoyMzg0OTIsInBsYXRmb3JtIjowLCJuYmYiOjE3MTkzMTI0NDYsImV4cCI6MTcxOTM5ODkwNn0.p6GAzWHUCdOrlKEvM8KzVqX6nkEkqEWNz6GXAv93vM8'}) must be of type str or bytes, not <class 'set'>
+
+
+2024-06-25 18:49:14.411 | INFO | Common.logger:wrapper:43 | 函数 test_report_boss 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x000001FBA5785EE0>,){}
+2024-06-25 18:49:20.000 | ERROR | Common.logger:wrapper:53 | 函数 test_report_boss 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\appium_project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\TestCase\test_boss_report.py", line 71, in test_report_boss
+    response = requests.post(url, headers=headers, data=data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\models.py", line 368, in prepare
+    self.prepare_headers(headers)
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\models.py", line 490, in prepare_headers
+    check_header_validity(header)
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\utils.py", line 1042, in check_header_validity
+    _validate_header_part(header, value, 1)
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\requests\utils.py", line 1051, in _validate_header_part
+    raise InvalidHeader(
+requests.exceptions.InvalidHeader: Header part ({'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJrZXkiOiJkaXN0cmljdF9yZWxlYXNlIiwiaXNzIjoyMzg0OTIsInBsYXRmb3JtIjowLCJuYmYiOjE3MTkzMTI1MDIsImV4cCI6MTcxOTM5ODk2Mn0.kwfqstHOxxwGPqzkC9-L6B5ktVBrMlsHqrRPzwgH3GE'}) from ('Authorization', {'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJrZXkiOiJkaXN0cmljdF9yZWxlYXNlIiwiaXNzIjoyMzg0OTIsInBsYXRmb3JtIjowLCJuYmYiOjE3MTkzMTI1MDIsImV4cCI6MTcxOTM5ODk2Mn0.kwfqstHOxxwGPqzkC9-L6B5ktVBrMlsHqrRPzwgH3GE'}) must be of type str or bytes, not <class 'set'>
+
+
+2024-06-25 18:50:59.976 | INFO | Common.logger:wrapper:43 | 函数 test_report_boss 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x00000270F81D5220>,){}
+2024-06-25 18:51:06.707 | INFO | TestCase.test_boss_report:test_report_boss:73 | 添加举报数据成功
+2024-06-25 18:51:10.912 | INFO | Common.logger:wrapper:48 | 函数 test_report_boss 执行完成，函数返回结果：None
+
+2024-06-25 18:53:18.208 | INFO | Common.logger:wrapper:43 | 函数 test_report_boss 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x00000294CACA16D0>,){}
+2024-06-25 18:53:25.418 | INFO | TestCase.test_boss_report:test_report_boss:73 | 添加举报数据成功
+2024-06-25 18:53:29.968 | ERROR | Common.logger:wrapper:53 | 函数 test_report_boss 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\appium_project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\TestCase\test_boss_report.py", line 112, in test_report_boss
+    audit_status = table.find_element(By.XPATH, '//*[@class="table table-hover grid-table"]/tbody/tr/td[12]').text
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=126.0.6478.115); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF7400D3E52+31618]
+	(No symbol) [0x00007FF74004B0B9]
+	(No symbol) [0x00007FF73FF0888A]
+	(No symbol) [0x00007FF73FF1AF2D]
+	(No symbol) [0x00007FF73FF1B9BA]
+	(No symbol) [0x00007FF73FF0F71B]
+	(No symbol) [0x00007FF73FF0D486]
+	(No symbol) [0x00007FF73FF11011]
+	(No symbol) [0x00007FF73FF110B0]
+	(No symbol) [0x00007FF73FF5805C]
+	(No symbol) [0x00007FF73FF5862C]
+	(No symbol) [0x00007FF73FF4BCDC]
+	(No symbol) [0x00007FF73FF7D14F]
+	(No symbol) [0x00007FF73FF4BBA6]
+	(No symbol) [0x00007FF73FF7D320]
+	(No symbol) [0x00007FF73FF9CA80]
+	(No symbol) [0x00007FF73FF7CEB3]
+	(No symbol) [0x00007FF73FF4A46B]
+	(No symbol) [0x00007FF73FF4B001]
+	GetHandleVerifier [0x00007FF7403DA02D+3202397]
+	GetHandleVerifier [0x00007FF740426A4D+3516285]
+	GetHandleVerifier [0x00007FF74041C4C0+3473904]
+	GetHandleVerifier [0x00007FF740185D56+760454]
+	(No symbol) [0x00007FF740056B5F]
+	(No symbol) [0x00007FF740051CF4]
+	(No symbol) [0x00007FF740051E82]
+	(No symbol) [0x00007FF74004122F]
+	BaseThreadInitThunk [0x00007FFFD70C257D+29]
+	RtlUserThreadStart [0x00007FFFD7FCAA58+40]
+
+
+
+2024-06-25 18:54:33.803 | INFO | Common.logger:wrapper:43 | 函数 test_report_boss 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x0000018671D254F0>,){}
+2024-06-25 18:54:40.404 | INFO | TestCase.test_boss_report:test_report_boss:73 | 添加举报数据成功
+2024-06-25 18:54:45.022 | INFO | Common.logger:wrapper:48 | 函数 test_report_boss 执行完成，函数返回结果：None
+
+2024-06-25 19:15:56.597 | INFO | TestCase.conftest:add_report_requests:79 | 添加举报数据成功
+2024-06-25 19:17:32.944 | INFO | TestCase.conftest:add_report_requests:77 | 添加举报数据成功
+2024-06-25 19:17:32.945 | INFO | Common.logger:wrapper:43 | 函数 test_boss_report_pass_notice 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x000001C9F5B77470>,){'add_report_requests': 124}
+2024-06-25 19:17:37.388 | INFO | Common.logger:wrapper:48 | 函数 test_boss_report_pass_notice 执行完成，函数返回结果：None
+
+2024-06-25 19:28:13.688 | INFO | TestCase.conftest:add_report_requests:77 | 添加举报数据成功
+2024-06-25 19:28:13.689 | INFO | Common.logger:wrapper:43 | 函数 test_boss_report_pass_notice 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x000001C4EA16D940>,){'add_report_requests': 125}
+2024-06-25 19:28:17.492 | ERROR | Common.logger:wrapper:53 | 函数 test_boss_report_pass_notice 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\appium_project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\TestCase\test_boss_report.py", line 144, in test_boss_report_pass_notice
+    driver.switch_to.alert.accept()
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\switch_to.py", line 58, in alert
+    _ = alert.text
+        ^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\common\alert.py", line 58, in text
+    return self.driver.execute(Command.W3C_GET_ALERT_TEXT)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoAlertPresentException: Message: no such alert
+  (Session info: chrome=126.0.6478.115)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7400D3E52+31618]
+	(No symbol) [0x00007FF74004B0B9]
+	(No symbol) [0x00007FF73FF086B9]
+	(No symbol) [0x00007FF73FEF8237]
+	(No symbol) [0x00007FF73FF2BEEF]
+	(No symbol) [0x00007FF73FF7D1BD]
+	(No symbol) [0x00007FF73FF2BD6B]
+	(No symbol) [0x00007FF73FF7CEB3]
+	(No symbol) [0x00007FF73FF4A46B]
+	(No symbol) [0x00007FF73FF4B001]
+	GetHandleVerifier [0x00007FF7403DA02D+3202397]
+	GetHandleVerifier [0x00007FF740426A4D+3516285]
+	GetHandleVerifier [0x00007FF74041C4C0+3473904]
+	GetHandleVerifier [0x00007FF740185D56+760454]
+	(No symbol) [0x00007FF740056B5F]
+	(No symbol) [0x00007FF740051CF4]
+	(No symbol) [0x00007FF740051E82]
+	(No symbol) [0x00007FF74004122F]
+	BaseThreadInitThunk [0x00007FFFD70C257D+29]
+	RtlUserThreadStart [0x00007FFFD7FCAA58+40]
+
+
+
+2024-06-25 19:32:39.565 | INFO | TestCase.conftest:add_report_requests:77 | 添加举报数据成功
+2024-06-25 19:32:39.566 | INFO | Common.logger:wrapper:43 | 函数 test_boss_report_pass_notice 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x000001CA62042000>,){'add_report_requests': 126}
+2024-06-25 19:32:44.708 | ERROR | Common.logger:wrapper:53 | 函数 test_boss_report_pass_notice 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\appium_project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\TestCase\test_boss_report.py", line 145, in test_boss_report_pass_notice
+    driver.switch_to.alert.accept()
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\switch_to.py", line 58, in alert
+    _ = alert.text
+        ^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\common\alert.py", line 58, in text
+    return self.driver.execute(Command.W3C_GET_ALERT_TEXT)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoAlertPresentException: Message: no such alert
+  (Session info: chrome=126.0.6478.115)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7400D3E52+31618]
+	(No symbol) [0x00007FF74004B0B9]
+	(No symbol) [0x00007FF73FF086B9]
+	(No symbol) [0x00007FF73FEF8237]
+	(No symbol) [0x00007FF73FF2BEEF]
+	(No symbol) [0x00007FF73FF7D1BD]
+	(No symbol) [0x00007FF73FF2BD6B]
+	(No symbol) [0x00007FF73FF7CEB3]
+	(No symbol) [0x00007FF73FF4A46B]
+	(No symbol) [0x00007FF73FF4B001]
+	GetHandleVerifier [0x00007FF7403DA02D+3202397]
+	GetHandleVerifier [0x00007FF740426A4D+3516285]
+	GetHandleVerifier [0x00007FF74041C4C0+3473904]
+	GetHandleVerifier [0x00007FF740185D56+760454]
+	(No symbol) [0x00007FF740056B5F]
+	(No symbol) [0x00007FF740051CF4]
+	(No symbol) [0x00007FF740051E82]
+	(No symbol) [0x00007FF74004122F]
+	BaseThreadInitThunk [0x00007FFFD70C257D+29]
+	RtlUserThreadStart [0x00007FFFD7FCAA58+40]
+
+
+
+2024-06-25 19:37:18.076 | INFO | TestCase.conftest:add_report_requests:77 | 添加举报数据成功
+2024-06-25 19:37:18.078 | INFO | Common.logger:wrapper:43 | 函数 test_boss_report_pass_notice 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x00000287F49B11C0>,){'add_report_requests': 127}
+2024-06-25 19:37:25.541 | INFO | Common.logger:wrapper:48 | 函数 test_boss_report_pass_notice 执行完成，函数返回结果：None
+
+2024-06-25 19:51:37.266 | INFO | TestCase.conftest:add_report_requests:77 | 添加举报数据成功
+2024-06-25 19:51:37.267 | INFO | Common.logger:wrapper:43 | 函数 test_boss_report_pass_silence_hours 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x00000278DCF9FA10>,){'add_report_requests': 128}
+2024-06-25 19:51:42.775 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:322 | 审核状态：审核通过
+2024-06-25 19:51:42.775 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:325 | 违规原因：暴力恐怖
+2024-06-25 19:51:42.939 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:328 | 处理方式禁言10小时
+2024-06-25 19:51:42.939 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:331 | 备注
+2024-06-25 19:51:42.939 | INFO | Common.logger:wrapper:48 | 函数 test_boss_report_pass_silence_hours 执行完成，函数返回结果：None
+
+2024-06-25 19:57:21.436 | INFO | TestCase.conftest:add_report_requests:77 | 添加举报数据成功
+2024-06-25 19:57:21.437 | INFO | Common.logger:wrapper:43 | 函数 test_boss_report_pass_silence_hours 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x000001E758210F50>,){'add_report_requests': 129}
+2024-06-25 19:57:26.767 | ERROR | Common.logger:wrapper:53 | 函数 test_boss_report_pass_silence_hours 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\appium_project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\TestCase\test_boss_report.py", line 311, in test_boss_report_pass_silence_hours
+    table = find_element_wrap(driver, 'xpath', '//*[@class="table table-hover grid-table"]/tbody')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\Common\find_element.py", line 10, in find_element_wrap
+    raise e
+  File "F:\python_project\appium_project\Common\find_element.py", line 7, in find_element_wrap
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 748, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: 审核完成，请刷新数据
+Message: unexpected alert open: {Alert text : 审核完成，请刷新数据}
+  (Session info: chrome=126.0.6478.115)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7400D3E52+31618]
+	(No symbol) [0x00007FF74004B0B9]
+	(No symbol) [0x00007FF73FF0888A]
+	(No symbol) [0x00007FF73FF9D226]
+	(No symbol) [0x00007FF73FF7CEB3]
+	(No symbol) [0x00007FF73FF4A46B]
+	(No symbol) [0x00007FF73FF4B001]
+	GetHandleVerifier [0x00007FF7403DA02D+3202397]
+	GetHandleVerifier [0x00007FF740426A4D+3516285]
+	GetHandleVerifier [0x00007FF74041C4C0+3473904]
+	GetHandleVerifier [0x00007FF740185D56+760454]
+	(No symbol) [0x00007FF740056B5F]
+	(No symbol) [0x00007FF740051CF4]
+	(No symbol) [0x00007FF740051E82]
+	(No symbol) [0x00007FF74004122F]
+	BaseThreadInitThunk [0x00007FFFD70C257D+29]
+	RtlUserThreadStart [0x00007FFFD7FCAA58+40]
+
+
+
+2024-06-25 19:59:57.510 | INFO | TestCase.conftest:add_report_requests:77 | 添加举报数据成功
+2024-06-25 19:59:57.511 | INFO | Common.logger:wrapper:43 | 函数 test_boss_report_pass_silence_hours 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x00000259A1435370>,){'add_report_requests': 130}
+2024-06-25 20:00:03.823 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:326 | 审核状态：审核通过
+2024-06-25 20:00:03.824 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:329 | 违规原因：暴力恐怖
+2024-06-25 20:00:03.991 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:332 | 处理方式禁言1小时
+2024-06-25 20:00:03.991 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:335 | 备注
+2024-06-25 20:00:03.992 | INFO | Common.logger:wrapper:48 | 函数 test_boss_report_pass_silence_hours 执行完成，函数返回结果：None
+
