@@ -1,0 +1,164 @@
+2024-06-25 17:04:42.049 | INFO | Common.logger:wrapper:43 | 函数 test_login_onelap 开始执行，入参:(){}
+2024-06-25 17:04:47.361 | INFO | test_login:test_login_onelap:14 | 连接设备成功
+2024-06-25 17:04:57.416 | ERROR | Common.logger:wrapper:53 | 函数 test_login_onelap 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\appium_project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\TestCase\test_login.py", line 17, in test_login_onelap
+    find_element_wrap(driver, 'id', 'com.onelap.bls.dear:id/btn_login_index').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\Common\find_element.py", line 10, in find_element_wrap
+    raise e
+  File "F:\python_project\appium_project\Common\find_element.py", line 7, in find_element_wrap
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-25 17:05:18.470 | INFO | Common.logger:wrapper:43 | 函数 test_login_onelap 开始执行，入参:(){}
+2024-06-25 17:05:22.322 | INFO | test_login:test_login_onelap:14 | 连接设备成功
+2024-06-25 17:05:29.111 | INFO | test_login:test_login_onelap:25 | 登录完成
+2024-06-25 17:05:41.148 | ERROR | Common.logger:wrapper:53 | 函数 test_login_onelap 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\appium_project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\TestCase\test_login.py", line 28, in test_login_onelap
+    get_app_name = find_element_wrap(driver, 'id', 'com.onelap.bls.dear:id/tv_app_name_main_fragment')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\Common\find_element.py", line 10, in find_element_wrap
+    raise e
+  File "F:\python_project\appium_project\Common\find_element.py", line 7, in find_element_wrap
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-25 17:06:12.943 | INFO | Common.logger:wrapper:43 | 函数 test_login_onelap 开始执行，入参:(){}
+2024-06-25 17:06:18.099 | INFO | test_login:test_login_onelap:14 | 连接设备成功
+2024-06-25 17:06:27.940 | INFO | test_login:test_login_onelap:25 | 登录完成
+2024-06-25 17:06:42.079 | ERROR | Common.logger:wrapper:53 | 函数 test_login_onelap 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\appium_project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\TestCase\test_login.py", line 30, in test_login_onelap
+    safe_dialog = find_element_wrap(driver, 'id', 'com.onelap.bls.dear:id/tv_confirm_common_dialog').click()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\Common\find_element.py", line 10, in find_element_wrap
+    raise e
+  File "F:\python_project\appium_project\Common\find_element.py", line 7, in find_element_wrap
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-25 17:07:25.830 | INFO | Common.logger:wrapper:43 | 函数 test_login_onelap 开始执行，入参:(){}
+2024-06-25 17:07:30.974 | INFO | test_login:test_login_onelap:14 | 连接设备成功
+2024-06-25 17:07:41.482 | INFO | test_login:test_login_onelap:25 | 登录完成
+2024-06-25 17:07:55.861 | INFO | Common.logger:wrapper:43 | 函数 test_login_onelap 开始执行，入参:(){}
+2024-06-25 17:08:00.915 | INFO | test_login:test_login_onelap:14 | 连接设备成功
+2024-06-25 17:08:13.331 | INFO | test_login:test_login_onelap:25 | 登录完成
+2024-06-25 17:08:15.938 | INFO | test_login:test_login_onelap:32 | home_app_name断言成功
+2024-06-25 17:08:15.938 | INFO | Common.logger:wrapper:48 | 函数 test_login_onelap 执行完成，函数返回结果：None
+
+2024-06-25 17:10:33.763 | INFO | Common.logger:wrapper:43 | 函数 test_login_onelap 开始执行，入参:(){}
+2024-06-25 17:10:37.832 | INFO | test_login:test_login_onelap:14 | 连接设备成功
+2024-06-25 17:10:47.352 | INFO | test_login:test_login_onelap:25 | 登录完成
+2024-06-25 17:10:50.110 | INFO | test_login:test_login_onelap:32 | home_app_name断言成功
+2024-06-25 17:10:50.110 | INFO | Common.logger:wrapper:48 | 函数 test_login_onelap 执行完成，函数返回结果：None
+
+2024-06-25 17:11:21.799 | INFO | Common.logger:wrapper:43 | 函数 test_login_onelap 开始执行，入参:(){}
+2024-06-25 17:11:27.012 | INFO | TestCase.test_login:test_login_onelap:14 | 连接设备成功
+2024-06-25 17:11:37.629 | INFO | TestCase.test_login:test_login_onelap:25 | 登录完成
+2024-06-25 17:11:40.205 | INFO | TestCase.test_login:test_login_onelap:32 | home_app_name断言成功
+2024-06-25 17:11:40.205 | INFO | Common.logger:wrapper:48 | 函数 test_login_onelap 执行完成，函数返回结果：None
+
+2024-06-25 17:12:42.987 | INFO | TestCase.conftest:login_onelap:17 | 连接设备成功
+2024-06-25 17:14:21.780 | INFO | TestCase.conftest:login_onelap:17 | 连接设备成功
+2024-06-25 17:14:30.985 | INFO | TestCase.conftest:login_onelap:28 | 登录完成
+2024-06-25 17:14:36.707 | INFO | TestCase.conftest:login_onelap:35 | home_app_name断言成功
+2024-06-25 17:14:36.708 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001AA41CE1520>,){'login_onelap': None}
+2024-06-25 17:15:08.827 | INFO | TestCase.conftest:login_onelap:17 | 连接设备成功
+2024-06-25 17:15:18.545 | INFO | TestCase.conftest:login_onelap:28 | 登录完成
+2024-06-25 17:15:21.809 | INFO | TestCase.conftest:login_onelap:35 | home_app_name断言成功
+2024-06-25 17:15:21.810 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001B4A47EEAE0>,){'login_onelap': None}
+2024-06-25 17:15:35.799 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\appium_project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\TestCase\test_onelap_report.py", line 19, in test_report
+    find_element_wrap(driver, 'id', "com.android.packageinstaller:id/permission_allow_button").click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\Common\find_element.py", line 10, in find_element_wrap
+    raise e
+  File "F:\python_project\appium_project\Common\find_element.py", line 7, in find_element_wrap
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-25 17:16:28.124 | INFO | TestCase.conftest:login_onelap:17 | 连接设备成功
+2024-06-25 17:17:12.067 | INFO | TestCase.conftest:login_onelap:17 | 连接设备成功
+2024-06-25 17:17:26.629 | INFO | TestCase.conftest:login_onelap:28 | 登录完成
+2024-06-25 17:17:30.983 | INFO | TestCase.conftest:login_onelap:35 | home_app_name断言成功
+2024-06-25 17:17:30.985 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001F535095EB0>,){'login_onelap': None}
+2024-06-25 17:17:46.456 | ERROR | Common.logger:wrapper:53 | 函数 test_report 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\appium_project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\TestCase\test_onelap_report.py", line 21, in test_report
+    find_element_wrap(driver, 'id', "com.onelap.bls.dear:id/include_planet_bottom_navigation").click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\Common\find_element.py", line 10, in find_element_wrap
+    raise e
+  File "F:\python_project\appium_project\Common\find_element.py", line 7, in find_element_wrap
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\Administrator\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Program Files\nodejs\node_global\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+
+2024-06-25 17:19:47.998 | INFO | TestCase.conftest:login_onelap:17 | 连接设备成功
+2024-06-25 17:19:59.181 | INFO | TestCase.conftest:login_onelap:28 | 登录完成
+2024-06-25 17:20:07.156 | INFO | TestCase.conftest:login_onelap:35 | home_app_name断言成功
+2024-06-25 17:20:07.158 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001E413626780>,){'login_onelap': None}
+2024-06-25 17:20:33.823 | INFO | Common.logger:wrapper:48 | 函数 test_report 执行完成，函数返回结果：None
+
