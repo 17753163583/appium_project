@@ -11,6 +11,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.select import Select
 
+from Common.check_exist_punish import check_exist_punish
 from Common.find_element import find_element_wrap
 from Common.logger import log_decorator
 
@@ -132,7 +133,9 @@ class TestBossReport:
         table = find_element_wrap(driver, 'xpath', '//*[@class="table table-hover grid-table"]/tbody')
 
         # 筛选后的举报列表，只有一条数据
-        table.find_element(By.XPATH, '//*[@class="table table-hover grid-table"]/tbody/tr')
+        tr = table.find_element(By.XPATH, '//*[@class="table table-hover grid-table"]/tbody/tr')
+
+        data_key = tr.get_attribute('data-key')
 
         # 打开审核页面
         table.find_element(By.XPATH,
@@ -274,7 +277,9 @@ class TestBossReport:
         table = find_element_wrap(driver, 'xpath', '//*[@class="table table-hover grid-table"]/tbody')
 
         # 筛选后的举报列表，只有一条数据
-        table.find_element(By.XPATH, '//*[@class="table table-hover grid-table"]/tbody/tr')
+        tr = table.find_element(By.XPATH, '//*[@class="table table-hover grid-table"]/tbody/tr')
+
+        data_key = tr.get_attribute('data-key')
 
         # 打开审核页面
         table.find_element(By.XPATH,
@@ -338,6 +343,9 @@ class TestBossReport:
         check.equal(audit_message, '', '判断列表中的备注是否正确')
         logger.info(f'备注{audit_message}')
 
+        check_exist_punish(driver, data_key)
+        logger.info("清理举报数据成功")
+
     @log_decorator
     @allure.title('举报信息审核通过_封号1小时')
     def test_boss_report_pass_silence_hours(self, add_report_requests):
@@ -351,7 +359,9 @@ class TestBossReport:
         table = find_element_wrap(driver, 'xpath', '//*[@class="table table-hover grid-table"]/tbody')
 
         # 筛选后的举报列表，只有一条数据
-        table.find_element(By.XPATH, '//*[@class="table table-hover grid-table"]/tbody/tr')
+        tr = table.find_element(By.XPATH, '//*[@class="table table-hover grid-table"]/tbody/tr')
+
+        data_key = tr.get_attribute('data-key')
 
         # 打开审核页面
         table.find_element(By.XPATH,
@@ -414,3 +424,6 @@ class TestBossReport:
 
         check.equal(audit_message, '', '判断列表中的备注是否正确')
         logger.info(f'备注{audit_message}')
+
+        check_exist_punish(driver, data_key)
+        logger.info("清理举报数据成功")
