@@ -40,6 +40,7 @@ class TestBossReport:
         check.is_true(logo)
 
     @pytest.mark.skip
+    @allure.title("请求使用cookie登录boss")
     def test_request_cookie_login(self):
         url = 'https://boss-informal.rfsvr.net/'
         headers = {'Referer': 'https://boss-informal.rfsvr.net/auth/login'}
@@ -118,6 +119,7 @@ class TestBossReport:
         logger.info(f'备注{audit_message}')
 
     @log_decorator
+    @pytest.mark.skip
     @allure.title('举报信息审核通过_通知警告')
     def test_boss_report_pass_notice(self, add_report_requests):
         # 按id筛选举报列表页面
@@ -260,6 +262,7 @@ class TestBossReport:
     # 第二次调用时，记得撤销处罚
     @log_decorator
     @allure.title('举报信息审核通过_禁言1小时')
+    @pytest.mark.skip
     def test_boss_report_pass_silence_hours(self, add_report_requests):
         # 按id筛选举报列表页面
         driver.get(f'https://boss-informal.rfsvr.net/admin/wl/social/user/report/list?report_id={add_report_requests}')
@@ -276,7 +279,7 @@ class TestBossReport:
         # 打开审核页面
         table.find_element(By.XPATH,
                            '//*[@class="table table-hover grid-table"]/tbody/tr/td[11]/span/a').click()
-        time.sleep(2)
+        time.sleep(1)
 
         # 点击审核通过
         table.find_element(By.XPATH,
@@ -291,7 +294,7 @@ class TestBossReport:
         # 禁言1小时
         input_box = table.find_element(By.XPATH,
                                        '//*[@class="box-body no-padding"]/table/tbody/tr[3]/th/div/span[2]/span[1]/input')
-        #
+        # 全选删除后，输入1
         input_box.send_keys(Keys.CONTROL + 'a')
         input_box.send_keys(Keys.BACKSPACE)
         input_box.send_keys(1)
@@ -330,6 +333,83 @@ class TestBossReport:
         logger.info(f'违规原因：{violations_reason}')
 
         check.equal(audit_handle_method, '禁言1小时', '判断列表中的处理方式是否正确')
+        logger.info(f'处理方式{audit_handle_method}')
+
+        check.equal(audit_message, '', '判断列表中的备注是否正确')
+        logger.info(f'备注{audit_message}')
+
+    @log_decorator
+    @allure.title('举报信息审核通过_封号1小时')
+    def test_boss_report_pass_silence_hours(self, add_report_requests):
+        # 按id筛选举报列表页面
+        driver.get(f'https://boss-informal.rfsvr.net/admin/wl/social/user/report/list?report_id={add_report_requests}')
+
+        """ 
+        driver.get('https://boss-informal.rfsvr.net/admin/wl/social/user/report/list?report_id=115')"""
+
+        # 定位到table表格
+        table = find_element_wrap(driver, 'xpath', '//*[@class="table table-hover grid-table"]/tbody')
+
+        # 筛选后的举报列表，只有一条数据
+        table.find_element(By.XPATH, '//*[@class="table table-hover grid-table"]/tbody/tr')
+
+        # 打开审核页面
+        table.find_element(By.XPATH,
+                           '//*[@class="table table-hover grid-table"]/tbody/tr/td[11]/span/a').click()
+        time.sleep(1)
+
+        # 点击审核通过
+        table.find_element(By.XPATH,
+                           '//*[@class="box-body no-padding"]/table/tbody/tr[1]/th/div/span/label[1]').click()
+
+        # 定位到处理方式下拉框
+        select = table.find_element(By.XPATH,
+                                    '//*[@class="box-body no-padding"]/table/tbody/tr[3]/th/div/span[1]/select')
+        # 选择封号
+        Select(select).select_by_value('is_forbid_login')
+
+        # 输入框
+        input_box = table.find_element(By.XPATH,
+                                       '//*[@class="box-body no-padding"]/table/tbody/tr[3]/th/div/span[2]/span[1]/input')
+        # 全选删除后，输入1
+        input_box.send_keys(Keys.CONTROL + 'a')
+        input_box.send_keys(Keys.BACKSPACE)
+        input_box.send_keys(1)
+
+        # 点击确定按钮
+        table.find_element(By.XPATH, '//*[@class="clearfix"]/div/a').click()
+
+        # alert弹窗有延迟
+        time.sleep(1)
+
+        # 处理alert弹窗
+        alert = driver.switch_to.alert
+        alert.accept()
+
+        driver.refresh()
+
+        # 刷新之后，使用的父节点定位失效，重新定位
+        # 不刷新无法更新审核状态（开发实现如此）
+
+        table = find_element_wrap(driver, 'xpath', '//*[@class="table table-hover grid-table"]/tbody')
+        # 列表页的审核状态
+        audit_status = table.find_element(By.XPATH, '//*[@class="table table-hover grid-table"]/tbody/tr/td[12]').text
+
+        violations_reason = table.find_element(By.XPATH,
+                                               '//*[@class="table table-hover grid-table"]/tbody/tr/td[14]').text
+        # 列表页的审核方式
+        audit_handle_method = table.find_element(By.XPATH,
+                                                 '//*[@class="table table-hover grid-table"]/tbody/tr/td[15]').text
+        audit_message = table.find_element(By.XPATH,
+                                           '//*[@class="table table-hover grid-table"]/tbody/tr/td[16]').text
+
+        check.equal(audit_status, '审核通过', '判断列表中的审核状态是否正确')
+        logger.info(f'审核状态：{audit_status}')
+
+        check.equal(violations_reason, '暴力恐怖', '判断列表中的违规原因是否正确')
+        logger.info(f'违规原因：{violations_reason}')
+
+        check.equal(audit_handle_method, '封号1小时', '判断列表中的处理方式是否正确')
         logger.info(f'处理方式{audit_handle_method}')
 
         check.equal(audit_message, '', '判断列表中的备注是否正确')

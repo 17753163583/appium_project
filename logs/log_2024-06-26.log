@@ -1,0 +1,8 @@
+2024-06-26 11:11:07.669 | INFO | TestCase.conftest:add_report_requests:77 | 添加举报数据成功
+2024-06-26 11:11:07.670 | INFO | Common.logger:wrapper:43 | 函数 test_boss_report_pass_silence_hours 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x00000271ACD40FB0>,){'add_report_requests': 131}
+2024-06-26 11:11:11.998 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:407 | 审核状态：审核通过
+2024-06-26 11:11:11.998 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:410 | 违规原因：暴力恐怖
+2024-06-26 11:11:11.998 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:413 | 处理方式封号1小时
+2024-06-26 11:11:11.999 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:416 | 备注
+2024-06-26 11:11:11.999 | INFO | Common.logger:wrapper:48 | 函数 test_boss_report_pass_silence_hours 执行完成，函数返回结果：None
+
