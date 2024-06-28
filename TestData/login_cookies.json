@@ -1,1 +1,32 @@
-[{"domain": "boss-informal.rfsvr.net", "expiry": 1719472349, "httpOnly": true, "name": "laravel_session", "path": "/", "sameSite": "Lax", "secure": false, "value": "eyJpdiI6Imw5NFJjUmY4dG10VmN2Q2NNYTlydFE9PSIsInZhbHVlIjoiUGUrZXZSUzRzZ01Wb3VkMHdkNkdoWjFUXC9cL0pBc05lcVVscENcL1FsNFRcL2g3RjV4SFwvaCtKT0ZQSkk4RlJ3aWYzIiwibWFjIjoiMjYzN2E0NTYwZDMwOWU4YjUyOTNiYWYxZWY0YTE2OWU4Y2UyZTZhNmVlMjBmNDU4MDhjYjcwZmNhYjE0MWI3MiJ9"}, {"domain": "boss-informal.rfsvr.net", "expiry": 1719472349, "httpOnly": false, "name": "XSRF-TOKEN", "path": "/", "sameSite": "Lax", "secure": false, "value": "eyJpdiI6IkxvdXVcLzZVV2xpdndwVTJTWU12KzBRPT0iLCJ2YWx1ZSI6IktneFlBN25YelFhXC9BYzV0SXJ2ZVJhVjhKVHlDRFkzSWZtZncwZ0ZnXC9DTlByXC8zb0xDY3FmalFVQnFGMCtDa2QiLCJtYWMiOiIwNmQxMzQ2NzM5NTc2ZmFlYTZiZTM2NzQ3OGJjZjE2N2I5YWI3MTc0ZWVjNjY5NTA2ZjFiMTEyNWNlZjVhMTU4In0%3D"}, {"domain": "boss-informal.rfsvr.net", "expiry": 1754025148, "httpOnly": true, "name": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d", "path": "/", "sameSite": "Lax", "secure": false, "value": "eyJpdiI6InY3a3pNbmxZYzBUNnA3UjJ1aXB3SlE9PSIsInZhbHVlIjoiZExuR2p4dm1hVngza3NRcVFVTVNuXC90Y24wdmdGRFlCMitLOWpvMVBsMWJaemdnSkpyUHZpcDljMGFjZTBVbFJ6NzJzU21VYlFaUDJ1MVlXRHBONWFTYWw4bUxESEdjaUNIVDFpYzVVSkxjZ1B5VzdlVFpvRVRkeElvQ3UxcjBGaGEyR1wvK1Q3N2Nzd1FiYUg0dTBoVkM0VGZYWnFqU214QksyZEpNQWpGQ0E9IiwibWFjIjoiMDg2MDY4MTdiZGZmYTJmMDQ1Zjg0N2EyOTk1MWEwZTYwMTBiMDA5NTg2YzNhNmM5MWQxNDZkMGFjYTFjYTM4MyJ9"}]
+[
+  {
+    "domain": "boss-informal.rfsvr.net",
+    "expiry": 1719472349,
+    "httpOnly": true,
+    "name": "laravel_session",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "eyJpdiI6Imw5NFJjUmY4dG10VmN2Q2NNYTlydFE9PSIsInZhbHVlIjoiUGUrZXZSUzRzZ01Wb3VkMHdkNkdoWjFUXC9cL0pBc05lcVVscENcL1FsNFRcL2g3RjV4SFwvaCtKT0ZQSkk4RlJ3aWYzIiwibWFjIjoiMjYzN2E0NTYwZDMwOWU4YjUyOTNiYWYxZWY0YTE2OWU4Y2UyZTZhNmVlMjBmNDU4MDhjYjcwZmNhYjE0MWI3MiJ9"
+  },
+  {
+    "domain": "boss-informal.rfsvr.net",
+    "expiry": 1719472349,
+    "httpOnly": false,
+    "name": "XSRF-TOKEN",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "eyJpdiI6IkxvdXVcLzZVV2xpdndwVTJTWU12KzBRPT0iLCJ2YWx1ZSI6IktneFlBN25YelFhXC9BYzV0SXJ2ZVJhVjhKVHlDRFkzSWZtZncwZ0ZnXC9DTlByXC8zb0xDY3FmalFVQnFGMCtDa2QiLCJtYWMiOiIwNmQxMzQ2NzM5NTc2ZmFlYTZiZTM2NzQ3OGJjZjE2N2I5YWI3MTc0ZWVjNjY5NTA2ZjFiMTEyNWNlZjVhMTU4In0%3D"
+  },
+  {
+    "domain": "boss-informal.rfsvr.net",
+    "expiry": 1754025148,
+    "httpOnly": true,
+    "name": "remember_admin_59ba36addc2b2f9401580f014c7f58ea4e30989d",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "eyJpdiI6InY3a3pNbmxZYzBUNnA3UjJ1aXB3SlE9PSIsInZhbHVlIjoiZExuR2p4dm1hVngza3NRcVFVTVNuXC90Y24wdmdGRFlCMitLOWpvMVBsMWJaemdnSkpyUHZpcDljMGFjZTBVbFJ6NzJzU21VYlFaUDJ1MVlXRHBONWFTYWw4bUxESEdjaUNIVDFpYzVVSkxjZ1B5VzdlVFpvRVRkeElvQ3UxcjBGaGEyR1wvK1Q3N2Nzd1FiYUg0dTBoVkM0VGZYWnFqU214QksyZEpNQWpGQ0E9IiwibWFjIjoiMDg2MDY4MTdiZGZmYTJmMDQ1Zjg0N2EyOTk1MWEwZTYwMTBiMDA5NTg2YzNhNmM5MWQxNDZkMGFjYTFjYTM4MyJ9"
+  }
+]

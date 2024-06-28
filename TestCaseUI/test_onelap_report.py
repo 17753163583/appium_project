@@ -1,22 +1,45 @@
 import time
 
 import pytest_check as check
+from loguru import logger
 from selenium.webdriver import ActionChains
 
+from Common.connect_device import connect_device_first
 from Common.connect_device import connect_device_later
 from Common.find_element import find_element_wrap
 from Common.logger import log_decorator
 
 
 class TestOnelap:
+    @log_decorator
+    def test_onelap_login(self):
+        driver = connect_device_first()
+        logger.info("连接设备成功")
+        # 首次打开app
+        find_element_wrap(driver, 'id', "com.onelap.bls.dear:id/tv_agree_privacy_dialog").click()
+        find_element_wrap(driver, 'id', 'com.onelap.bls.dear:id/btn_login_index').click()
+        find_element_wrap(driver, 'id', 'com.onelap.bls.dear:id/et_username_login').send_keys('17753163583')
+        find_element_wrap(driver, 'id', 'com.onelap.bls.dear:id/et_password_login').send_keys('zhang107.')
+        find_element_wrap(driver, 'id', 'com.onelap.bls.dear:id/btn_check_out_login').click()
+
+        find_element_wrap(driver, 'id', 'com.onelap.bls.dear:id/btn_login_login').click()
+        # 首次打开app
+        find_element_wrap(driver, 'id', 'com.onelap.bls.dear:id/tv_agree_privacy_dialog').click()
+        logger.info('登录完成')
+        time.sleep(2)
+
+        get_app_name = find_element_wrap(driver, 'id', 'com.onelap.bls.dear:id/tv_app_name_main_fragment')
+        # 首次打开app
+        # find_element_wrap(driver, 'id', 'com.onelap.bls.dear:id/tv_confirm_common_dialog').click()
+        if check.equal(get_app_name.text, '顽鹿运动（预发布服）'):
+            logger.info(f"{get_app_name.text}断言成功，登录成功")
+        else:
+            logger.error(f"{get_app_name.text}断言失败，登录失败")
 
     @log_decorator
-    def test_report(self, login_onelap):
+    def test_report(self):
         driver = connect_device_later()
         actions = ActionChains(driver)
-
-        # 初次登录时使用
-        # find_element_wrap(driver, 'id', "com.android.packageinstaller:id/permission_allow_button").click()
 
         find_element_wrap(driver, 'id', "com.onelap.bls.dear:id/include_planet_bottom_navigation").click()
 

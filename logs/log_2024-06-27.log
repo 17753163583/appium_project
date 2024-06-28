@@ -1,0 +1,67 @@
+2024-06-27 13:57:26.105 | INFO | TestCase.conftest:add_report_requests:78 | 添加举报数据成功
+2024-06-27 13:57:26.106 | INFO | Common.logger:wrapper:43 | 函数 test_boss_report_pass_silence_hours 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x000001D5BE385100>,){'add_report_requests': 133}
+2024-06-27 13:57:30.362 | ERROR | Common.logger:wrapper:53 | 函数 test_boss_report_pass_silence_hours 异常堆栈：Traceback (most recent call last):
+  File "F:\python_project\appium_project\Common\logger.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\TestCase\test_boss_report.py", line 404, in test_boss_report_pass_silence_hours
+    table = find_element_wrap(driver, 'xpath', '//*[@class="table table-hover grid-table"]/tbody')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\Common\find_element.py", line 10, in find_element_wrap
+    raise e
+  File "F:\python_project\appium_project\Common\find_element.py", line 7, in find_element_wrap
+    element = WebDriverWait(driver, 10, 0.25).until(ec.visibility_of_element_located((find_type, find_key)))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 156, in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 751, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "F:\python_project\appium_project\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 228, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: 审核完成，请刷新数据
+Message: unexpected alert open: {Alert text : 审核完成，请刷新数据}
+  (Session info: chrome=126.0.6478.115)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DA313E52+31618]
+	(No symbol) [0x00007FF6DA28B0B9]
+	(No symbol) [0x00007FF6DA14888A]
+	(No symbol) [0x00007FF6DA1DD226]
+	(No symbol) [0x00007FF6DA1BCEB3]
+	(No symbol) [0x00007FF6DA18A46B]
+	(No symbol) [0x00007FF6DA18B001]
+	GetHandleVerifier [0x00007FF6DA61A02D+3202397]
+	GetHandleVerifier [0x00007FF6DA666A4D+3516285]
+	GetHandleVerifier [0x00007FF6DA65C4C0+3473904]
+	GetHandleVerifier [0x00007FF6DA3C5D56+760454]
+	(No symbol) [0x00007FF6DA296B5F]
+	(No symbol) [0x00007FF6DA291CF4]
+	(No symbol) [0x00007FF6DA291E82]
+	(No symbol) [0x00007FF6DA28122F]
+	BaseThreadInitThunk [0x00007FF92ABB257D+29]
+	RtlUserThreadStart [0x00007FF92BACAA58+40]
+
+
+
+2024-06-27 13:58:21.669 | INFO | TestCase.conftest:add_report_requests:78 | 添加举报数据成功
+2024-06-27 13:58:21.670 | INFO | Common.logger:wrapper:43 | 函数 test_boss_report_pass_silence_hours 开始执行，入参:(<TestCase.test_boss_report.TestBossReport object at 0x0000015BC801FC20>,){'add_report_requests': 134}
+2024-06-27 13:58:26.397 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:417 | 审核状态：审核通过
+2024-06-27 13:58:26.397 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:420 | 违规原因：暴力恐怖
+2024-06-27 13:58:26.397 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:423 | 处理方式封号1小时
+2024-06-27 13:58:26.398 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:426 | 备注
+2024-06-27 13:58:27.579 | INFO | TestCase.test_boss_report:test_boss_report_pass_silence_hours:429 | 清理举报数据成功
+2024-06-27 13:58:27.579 | INFO | Common.logger:wrapper:48 | 函数 test_boss_report_pass_silence_hours 执行完成，函数返回结果：None
+
+2024-06-27 15:21:29.041 | INFO | TestCase.conftest:login_onelap:20 | 连接设备成功
+2024-06-27 15:21:39.186 | INFO | TestCase.conftest:login_onelap:31 | 登录完成
+2024-06-27 15:21:41.316 | INFO | TestCase.conftest:login_onelap:38 | 顽鹿运动（预发布服）断言成功，登录成功
+2024-06-27 15:21:41.318 | INFO | Common.logger:wrapper:43 | 函数 test_report 开始执行，入参:(<TestCase.test_onelap_report.TestOnelap object at 0x000001CC5D1161B0>,){'login_onelap': None}
+2024-06-27 15:22:07.805 | INFO | Common.logger:wrapper:48 | 函数 test_report 执行完成，函数返回结果：None
+
